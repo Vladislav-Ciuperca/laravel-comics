@@ -16,7 +16,23 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $data = [
-        "msg" => "cheddar sauce + BBQ = wow"
+        "msg" => "cheddar sauce + BBQ = wow",
+        "nomi" => [
+            "andrea",
+            "luca",
+            "giacomo",
+            "maccio",
+            "gigabue",
+            "25 cent",
+        ],
+        "favColor"=>[
+            "giallol",
+            "verde",
+            "blu",
+            "giallol",
+            "verde",
+            "blu",
+        ]
     ];
 
     return view('home', $data);
