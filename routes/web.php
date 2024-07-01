@@ -15,31 +15,15 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    $data = [
-        "msg" => "cheddar sauce + BBQ = wow",
-        "nomi" => [
-            "andrea",
-            "luca",
-            "giacomo",
-            "maccio",
-            "gigabue",
-            "25 cent",
-        ],
-        "favColor"=>[
-            "giallol",
-            "verde",
-            "blu",
-            "giallol",
-            "verde",
-            "blu",
-        ]
-    ];
+   $data = config("store");
 
-    return view('home', $data);
+    return view('home', ["comics"=>$data]);
 });
 ////////////////////////////////////////////////
 Route::get('/home', function () {
-    return view('home');
+    $data = config("store");
+
+    return view('home', ["comics"=>$data]);
 });
 ////////////////////////////////////////////////
 Route::get('/prova', function () {
@@ -59,4 +43,4 @@ Route::get('/prova', function () {
     ];
 
     return view('prova', $data);
-});k
+});

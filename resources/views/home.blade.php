@@ -7,20 +7,23 @@
 
     <title>Laravel</title>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="antialiased">
-    <h1><a href="http://127.0.0.1:8000/prova">pagina bonus</a></h1>
-    <h2>{{ $msg }}</h2>
+
+    @include('partials.header')
 
     <div class="container">
-        <div class="card">
-            
-        </div>
+
+        @foreach ($comics as $comic)
+            @include('partials.card')
+        @endforeach
+
     </div>
+
+
+
 </body>
 
 </html>
