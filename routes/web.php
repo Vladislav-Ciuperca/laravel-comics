@@ -54,9 +54,9 @@ Route::get('/prova', function () {
             "michele",
             "andrea",
             "giacomo",
-            "maccio",
+            "maccpio",
         ]
     ];
 
     return view('prova', $data);
-});
+});k
