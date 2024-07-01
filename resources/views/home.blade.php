@@ -9,7 +9,9 @@
     <div class="container">
 
         @foreach ($comics as $indice => $fumetto)
-            @include('partials.card')
+            <a href="/home/{{$indice}}">
+                @include('partials.card')
+            </a>
         @endforeach
 
     </div>

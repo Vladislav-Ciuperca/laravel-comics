@@ -18,14 +18,16 @@ header{
     display: flex;
     flex-wrap: wrap;
 }
-.card{
+.container a{
     width: calc(25% - 2rem);
     height: 800px;
-    /* border: 2px dashed purple; */
     margin: 1rem;
-    padding: 1rem;
+}
+.card{
+    height: 800px;
     position: relative;
     background: #b9b9b9;
+    padding: 1rem;
 }
 .card img{
     width: 100%;

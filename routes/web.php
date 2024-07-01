@@ -15,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-   $data = config("store");
+    $data = config("store");
 
-    return view('home', ["comics"=>$data]);
+    return view('home', ["comics" => $data]);
 })->name("home");
 
 ////////////////////////////////////////////////
@@ -25,7 +25,7 @@ Route::get('/', function () {
 Route::get('/home', function () {
     $data = config("store");
 
-    return view('home', ["comics"=>$data]);
+    return view('home', ["comics" => $data]);
 });
 
 ////////////////////////////////////////////////
@@ -34,17 +34,17 @@ Route::get('/prova', function () {
 
     $msg = "cioa messaggio di prova";
     $description = "description lorem";
- 
+
     $data = [
         "msg" => $msg,
         "description" => $description,
-        "studenti"=> [
+        "studenti" => [
             "michele",
             "andrea",
             "giacomo",
             "maccpio",
         ]
-     ];
+    ];
 
     return view('prova', $data);
 })->name('prova');
@@ -61,13 +61,13 @@ Route::get('/about', function () {
 
 ///////////////////////////////////////////////
 
-Route::get('/home/{indice}',function($indice) {
+Route::get('/home/{indice}', function ($indice) {
 
     // return "hai caricato la rotta 'comic-details' passando un indice" ." ". $indice;
 
-     $data = config('store');
+    $data = config('store');
 
-     
 
-     return view('home', ["comics"=>$data]);
-})->name("home-details");
+
+    return view('home_specific', ["comics" => $data]);
+});
