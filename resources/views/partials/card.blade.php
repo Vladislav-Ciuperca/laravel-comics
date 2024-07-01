@@ -1,12 +1,12 @@
 
 <div class="card">
-    <img src="{{ $comic['thumb'] }}" alt="">
-    <span class="price">{{ $comic['price'] }}</span>
-    <span class="date">{{ $comic['sale_date'] }}</span>
-    <h2 class="title">{{ $comic['title'] }}</h2>
+    <img src="{{ $fumetto['thumb'] }}" alt="">
+    <span class="price">{{ $fumetto['price'] }}</span>
+    <span class="date">{{ $fumetto['sale_date'] }}</span>
+    <h2 class="title">{{ $fumetto['title'] }}</h2>
     <div class="description">
-        <span>{{ $comic['description'] }}</span>
+        <span>{{ $fumetto['description'] }}</span>
     </div>
-    <div class="type">{{ $comic['type'] }}</div>
-    <div class="series">{{ $comic['series'] }}</div>
+    <div class="type">{{ $fumetto['type'] }}</div>
+    <div class="series">{{ $fumetto['series'] }}</div>
 </div>

@@ -1,29 +1,17 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+@extends('layouts.app')
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+@section('title', 'Lista Fumetti')
 
-    <link rel="stylesheet" href="style.css">
-</head>
+@section('content')
 
-<body class="antialiased">
-
-    @include('partials.header')
 
     <div class="container">
 
-        @foreach ($comics as $comic)
+        @foreach ($comics as $indice => $fumetto)
             @include('partials.card')
         @endforeach
 
     </div>
 
-
-
-</body>
-
-</html>
+@endsection
