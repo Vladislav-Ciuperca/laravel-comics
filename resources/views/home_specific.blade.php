@@ -2,8 +2,7 @@
 
 @section('content')
 
-{{-- @include('partials.card') --}}
 
-<h1>{{$fumetto[1]}}</h1>
+@include('partials.card')
 
 @endsection

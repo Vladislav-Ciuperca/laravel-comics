@@ -65,9 +65,9 @@ Route::get('/home/{indice}', function ($indice) {
 
     // return "hai caricato la rotta 'comic-details' passando un indice" ." ". $indice;
 
-    $data = config('store');
+    $fumetti = config('store');
 
+    $data =  $fumetti[$indice];
 
-
-    return view('home_specific', ["comics" => $data]);
+    return view('home_specific', ["fumetto" => $data]);
 });
